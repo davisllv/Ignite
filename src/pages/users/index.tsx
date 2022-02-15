@@ -75,7 +75,7 @@ export default function UserList() {
                     colorScheme="purple"
                     leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
                   >
-                    Criar Novo
+                    Editar
                   </Button>
                 </Td>
               </Tr>
