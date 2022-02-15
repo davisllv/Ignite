@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { Input } from "../../Components/Form/Input";
 import { Header } from "../../Components/Header";
-import { Sidebar } from "../../Components/Siderbar";
+import { Sidebar } from "../../Components/Sidebar";
 
 export default function CreateUser() {
   return (

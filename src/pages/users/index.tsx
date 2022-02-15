@@ -14,7 +14,7 @@ import {
   Tr,
 } from "@chakra-ui/react";
 import { Header } from "../../Components/Header";
-import { Sidebar } from "../../Components/Siderbar";
+import { Sidebar } from "../../Components/Sidebar";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Pagination } from "../../Components/Pagination";
 
@@ -50,7 +50,7 @@ export default function UserList() {
                 </Th>
                 <Th>Usuários</Th>
                 <Th>Data de Cadastro</Th>
-                <Th width="2"></Th>
+                <Th width="8"></Th>
               </Tr>
             </Thead>
             <Tbody>
