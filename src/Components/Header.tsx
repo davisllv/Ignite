@@ -68,7 +68,7 @@ export function Header() {
             </Text>
           </Box>
 
-          <Avatar size="md" name="Diego Fernades" />
+          <Avatar size="md" name="Davi da Silva dos Santos" />
         </Flex>
       </Flex>
     </Flex>
