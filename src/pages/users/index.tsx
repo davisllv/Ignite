@@ -24,7 +24,7 @@ import { useEffect } from "react";
 import { useQuery } from "react-query";
 
 export default function UserList() {
-  const { data, isLoading, error } = useQuery(
+  const { data, isLoading, error, isFetching } = useQuery(
     "users",
     async () => {
       const response = await fetch("http://localhost:3000/api/users");
@@ -66,6 +66,9 @@ export default function UserList() {
           <Flex mb="8" justifyContent={"space-between"} align="center">
             <Heading size="lg" fontWeight="normal">
               Usuários
+              {!isLoading && isFetching && (
+                <Spinner size="sm" color="gray.500" />
+              )}
             </Heading>
             <Link href="/users/create" passHref>
               <Button
