@@ -20,15 +20,15 @@ import { Header } from "../../Components/Header";
 import { Sidebar } from "../../Components/Sidebar";
 import { RiAddLine, RiContactsBookLine, RiPencilLine } from "react-icons/ri";
 import { Pagination } from "../../Components/Pagination";
-import { useEffect } from "react";
 import { useQuery } from "react-query";
+import { api } from "../../services/api";
 
 export default function UserList() {
   const { data, isLoading, error, isFetching } = useQuery(
     "users",
     async () => {
-      const response = await fetch("http://localhost:3000/api/users");
-      const data = await response.json();
+      const { data } = await api.get("users");
+      console.log(data);
 
       const users = data.users.map((user) => {
         return {
