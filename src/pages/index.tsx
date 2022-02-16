@@ -2,6 +2,11 @@ import { Flex, Button, Stack } from "@chakra-ui/react";
 import { Input } from "../Components/Form/Input";
 
 export default function Signin() {
+  const { register, handleSubmit, formState } = useForm({
+    resolver: yupResolver(signInFormSchema),
+  });
+  const { errors } = formState;
+
   return (
     <Flex w="100vw" h="100vh" align="center" justify="center">
       <Flex
@@ -14,9 +19,19 @@ export default function Signin() {
         flexDir="column"
       >
         <Stack spacing="4">
-          <Input type="email" name="email" label="E-mail" />
+          <Input
+            type="email"
+            name="email"
+            label="E-mail"
+            {...register("email")}
+          />
 
-          <Input type="password" name="password" label="Senha" />
+          <Input
+            type="password"
+            name="password"
+            label="Senha"
+            {...register("password")}
+          />
         </Stack>
         <Button type="submit" mt="6" colorScheme="pink">
           Entrar
