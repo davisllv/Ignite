@@ -21,6 +21,8 @@ export async function getUsers(page: number): Promise<GetUsersResponse> {
     });
     const totalCount = Number(headers['x-total-count'])
 
+
+
     const users = data.users.map((user) => {
         return {
             id: user.id,
@@ -44,7 +46,7 @@ export function useUsers(page: number) {
         ["users", page], () =>
         getUsers(page),
         {
-            staleTime: 1000 * 5,
+            staleTime: 1000 * 60 * 10,
         }
     );
 }
