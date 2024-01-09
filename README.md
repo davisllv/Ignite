@@ -14,3 +14,4 @@ O projeto foi baseado no 4º módulo da trilha ReactJS do Ignite. Além do que f
 ```yarn```
 - Inicie o servidor com ```yarn dev```
 - Agora você pode acessar localhost:3000 do seu navegador.
+- _Projeto estudantil
